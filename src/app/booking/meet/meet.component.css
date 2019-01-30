@@ -1,0 +1,16 @@
+.select {
+    width: 223px;
+    height: 45px;
+    background-color: white;
+    float: left;
+}
+
+.calendar {
+    height: 39px;
+    margin-left: 10px;
+    width: 100px;
+    background-color: #052134;
+    color: white;
+    font-size: 20px;
+    float: left;
+}

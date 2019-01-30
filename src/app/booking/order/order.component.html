@@ -1,0 +1,28 @@
+<div class="order">
+  <div class="order2">
+    <div class="order-row">
+      <p class="title">Odbiór: </p>
+    </div>
+    <div class="order-row">
+      <app-meet 
+        placeholder="Miejsce Odbioru" 
+        [meet]="order.pickUp" 
+        [cities]="order.cities" 
+        (dateChange)="order.changeMinEnd()">
+      </app-meet>
+    </div>
+    <div class="order-row">
+      <p class="title">Zwrot: </p>
+    </div>
+    <div class="order-row">
+      <app-meet 
+        placeholder="Miejsce zwrotu" 
+        [meet]="order.dropOff" 
+        [cities]="order.cities">
+      </app-meet>
+    </div>
+    <div class="order-row order-button">
+        <button mat-raised-button color="primary" (click)="checkOrder()">SPRAWDŹ OFERTĘ! ></button>
+    </div>
+  </div>
+</div>

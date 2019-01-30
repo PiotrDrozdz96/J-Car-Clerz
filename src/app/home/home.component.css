@@ -1,0 +1,14 @@
+.home {
+    width: 100%;
+    height: calc(100vh - 327px);
+    background-image: url(https://carnet.pl/themes/cn/images/menu_mid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.order {
+    position: relative;
+    top: -200px;
+    left: 150px;
+}
