@@ -25,7 +25,14 @@ export class OrderComponent implements OnInit {
   public checkOrder() {
     if (this.order.checkOffer()) {
       this.router.navigate(['/Booking/Step1']);
+    } else {
+      alert('Nie wskazano miejsca');
     }
+  }
+
+  public change() {
+    this.order.changeMinEnd();
+    this.order.change.emit();
   }
 
 }

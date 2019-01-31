@@ -16,7 +16,7 @@ export class Step1Component implements OnInit {
     this.api.getCars().subscribe(cars => {
       this.cars = cars;
     });
-   }
+  }
 
   ngOnInit() {
   }

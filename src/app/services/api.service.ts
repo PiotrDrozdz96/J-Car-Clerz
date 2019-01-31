@@ -22,7 +22,7 @@ export class ApiService {
   public calculateOrder(order: Order): Order {
     const oneDay = 24 * 60 * 60 * 1000;
     order.costs = {
-      price: Math.round(Math.abs((order.pickUp.date.getTime() - order.dropOff.date.getTime()) / (oneDay))) * order.car.pricePerDay,
+      price: (Math.round(Math.abs((order.pickUp.date.getTime() - order.dropOff.date.getTime()) / (oneDay))) || 1) * order.car.pricePerDay,
       deposit: order.car.deposit,
       additionalCosts: [{ name: 'Opłata przygotowawcza', price: 49 }],
       additionalCostsOnDemand: [
@@ -32,7 +32,7 @@ export class ApiService {
         { name: 'Wyjazd za granicę(kraje UE)', price: 249, demand: false }
       ]
     };
-    console.log(order.pickUp.date.getHours());
+
     const nightPrice = ((order.pickUp.date.getHours() >= 22 || order.pickUp.date.getHours() < 6) ? 199 : 0) +
       ((order.dropOff.date.getHours() >= 22 || order.dropOff.date.getHours() < 6) ? 199 : 0);
     if (nightPrice !== 0) {

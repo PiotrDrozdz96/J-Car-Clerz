@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 import { ApiService } from './api.service';
 
@@ -16,6 +16,8 @@ export class OrderService {
 
   public car: Car;
 
+  public change: EventEmitter<void> = new EventEmitter();
+
   constructor(private api: ApiService) {
 
     this.pickUp = new Meet(1);
@@ -27,13 +29,7 @@ export class OrderService {
   }
 
   public checkOffer(): boolean {
-    if (!this.pickUp.place) {
-      alert('Nie wskazano miejsca odbioru');
-    } else if (!this.dropOff.place) {
-      alert('Nie wskazano miejsca zwrotu');
-    } else {
-      return true;
-    }
+    return (this.pickUp.place && this.dropOff.place) ? true : false;
   }
 
   public setCar(car: Car) {

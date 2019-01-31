@@ -18,12 +18,17 @@ export class OrderBarComponent implements OnInit {
       this.cities = cities;
     });
 
-    // if (!this.order.pickUp.place || !this.order.dropOff.place) {
-    //   this.router.navigate(['']);
-    // }
+    if (!this.order.pickUp.place || !this.order.dropOff.place) {
+      this.router.navigate(['']);
+    }
   }
 
   ngOnInit() {
+  }
+
+  public change() {
+    this.order.changeMinEnd();
+    this.order.change.emit();
   }
 
 }

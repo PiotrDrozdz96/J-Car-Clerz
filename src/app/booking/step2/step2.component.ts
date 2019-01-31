@@ -16,11 +16,16 @@ export class Step2Component implements OnInit {
   order: Order;
 
   constructor(public orderService: OrderService, private router: Router, private api: ApiService) {
-    if (!this.orderService.pickUp.date.value || !this.orderService.dropOff.date.value || !this.orderService.car) {
-      this.router.navigate(['/Booking/Step1']);
+    if (!this.orderService.car) {
+      this.router.navigate(['']);
     } else {
       this.order = this.orderService.makeOrder();
     }
+    this.orderService.change.subscribe(() => {
+      const demand = this.order.costs.additionalCostsOnDemand;
+      this.order = this.orderService.makeOrder();
+      this.order.costs.additionalCostsOnDemand = demand;
+    });
   }
 
   ngOnInit() {

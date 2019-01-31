@@ -17,11 +17,11 @@ export class Meet {
         if (/\d\d?:\d\d?/.test(this.hours)) {
             const [hours, minutes] = this.hours.split(':').map(Number);
             if (hours >= 24 || minutes >= 60) {
-              this.hoursReset();
+                this.hoursReset();
             } else {
-              this.date.value.setHours(hours, minutes);
+                this.date.value.setHours(hours, minutes);
             }
-          } else { this.hoursReset(); }
+        } else { this.hoursReset(); }
     }
 
     public setMin(date: number) {

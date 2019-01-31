@@ -12,7 +12,7 @@ export class MeetComponent implements OnInit {
   @Input() meet: Meet;
   @Input() cities: Array<string>;
 
-  @Output() dateChange: EventEmitter<void> = new EventEmitter();
+  @Output() changeEmitter: EventEmitter<void> = new EventEmitter();
 
   constructor() { }
 
@@ -20,7 +20,8 @@ export class MeetComponent implements OnInit {
   }
 
   public change() {
-    this.dateChange.emit();
+    this.meet.checkHours();
+    this.changeEmitter.emit();
   }
 
 }
