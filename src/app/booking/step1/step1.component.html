@@ -1,1 +1,4 @@
-<app-cars-order-list></app-cars-order-list>
+<div *ngFor="let car of cars">
+    <app-car-full [car]="car" [choosenOption]="true"></app-car-full>
+  </div>
+  

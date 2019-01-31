@@ -1,3 +1,40 @@
-<p>
-  step2 works!
-</p>
+<app-car-full [car]="order.car"></app-car-full>
+<div class="bilance">
+    <div class="bilance-column">
+        <h1>Podsumowanie Kosztów</h1>
+        <div class="bilance-row">
+            <div class="bilance-row-name">Wynajem auta</div>
+            <div class="bilance-row-cost">{{order.costs.price}} zł</div>
+        </div>
+        <div class="bilance-row">
+            <div class="bilance-row-name">Kaucja zwrotna</div>
+            <div class="bilance-row-cost">{{order.costs.deposit}} zł</div>
+        </div>
+        <div class="bilance-row">
+            <div class="bilance-row-name">Opłaty dodatkowe</div>
+            <div class="bilance-row-cost">{{order.costs.additionalCosts.reduce(getSum,0)}} zł</div>
+        </div>
+        <div class="bilance-partial" *ngFor="let cost of order.costs.additionalCosts">
+            <div class="bilance-partial-name">{{cost.name}}</div>
+            <div class="bilance-partial-cost">{{cost.price}} zł</div>
+        </div>
+        <div class="bilance-row">
+            <div class="bilance-row-name">Opłaty dodatkowe na żądanie</div>
+            <div class="bilance-row-cost">{{order.costs.additionalCostsOnDemand.reduce(getSumFilter,0)}} zł</div>
+        </div>
+        <div class="bilance-partial" *ngFor="let cost of order.costs.additionalCostsOnDemand">
+            <div>
+                <mat-checkbox [(ngModel)]="cost.demand"></mat-checkbox>
+                <p class="bilance-partial-name-name">{{cost.name}}</p>
+            </div>
+            <div class="bilance-partial-cost">{{cost.price}} zł</div>
+        </div>
+    </div>
+</div>
+<div class="summary">
+    <div class="summary-container">
+        <div class="smaller">Suma</div>
+        {{getTotalCost(order.costs)}} zł brutto<br>
+        <button class="booking-button" mat-raised-button color="accent" (click)="booking()">Rezerwuj</button>
+    </div>
+</div>

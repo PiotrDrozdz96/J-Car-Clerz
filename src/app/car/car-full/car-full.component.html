@@ -14,10 +14,10 @@
       <p>{{equipment.replace('_', ' ')}}</p>
     </div>
   </div>
-  <div class="costs">
+  <div class="costs" *ngIf="choosenOption">
     <p class="price">{{car.pricePerDay}} zł</p>
     <p class="brutto">brutto</p>
     <p class="deposit">Kaucja zwrotna {{car.deposit}} zł brutto</p>
-    <button mat-raised-button color="primary" [routerLink]="['/Booking/Step2']">Wybierz</button>
+    <button mat-raised-button color="accent" (click)="choose()">Wybierz</button>
   </div>
 </div>

@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 
 import { Meet } from '../booking/meet/meet';
+import { Car } from '../car/car';
+import { Order } from '../booking/Order';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +13,8 @@ export class OrderService {
 
   public pickUp: Meet;
   public dropOff: Meet;
+
+  public car: Car;
 
   constructor(private api: ApiService) {
 
@@ -30,5 +34,23 @@ export class OrderService {
     } else {
       return true;
     }
+  }
+
+  public setCar(car: Car) {
+    this.car = car;
+  }
+
+  public makeOrder(): Order {
+    return this.api.calculateOrder({
+      car: this.car,
+      pickUp: {
+        date: this.pickUp.date.value,
+        place: this.pickUp.place
+      },
+      dropOff: {
+        date: this.dropOff.date.value,
+        place: this.dropOff.place
+      }
+    });
   }
 }

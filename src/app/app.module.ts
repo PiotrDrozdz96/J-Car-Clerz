@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import {
   MatButtonModule,
   MatMenuModule,
+  MatCheckboxModule,
   MatSelectModule,
   MatOptionModule,
   MatDatepickerModule,
@@ -24,7 +25,6 @@ import { BookingComponent } from './booking/booking.component';
 import { Step1Component } from './booking/step1/step1.component';
 import { Step2Component } from './booking/step2/step2.component';
 
-import { CarsOrderListComponent } from './car/cars-order-list/cars-order-list.component';
 import { CarFullComponent } from './car/car-full/car-full.component';
 
 import { OrderService } from './services/order.service';
@@ -40,7 +40,6 @@ import { OrderService } from './services/order.service';
     BookingComponent,
     Step1Component,
     Step2Component,
-    CarsOrderListComponent,
     CarFullComponent
   ],
   imports: [
@@ -51,6 +50,7 @@ import { OrderService } from './services/order.service';
     HttpClientModule,
     MatButtonModule,
     MatMenuModule,
+    MatCheckboxModule,
     MatSelectModule,
     MatOptionModule,
     MatDatepickerModule,

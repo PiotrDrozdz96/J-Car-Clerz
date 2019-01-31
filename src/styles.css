@@ -1,4 +1,4 @@
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 body {
     margin: 0;
@@ -7,4 +7,8 @@ body {
 .mat-select-value,  .mat-select-placeholder, .mat-select-arrow{
     color: #052134;
     font-size: 25px;
+}
+
+.mat-icon-button {
+    color: #ff4081;
 }
