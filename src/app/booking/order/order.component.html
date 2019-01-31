@@ -7,7 +7,7 @@
       <app-meet 
         placeholder="Miejsce Odbioru" 
         [meet]="order.pickUp" 
-        [cities]="order.cities" 
+        [cities]="cities" 
         (dateChange)="order.changeMinEnd()">
       </app-meet>
     </div>
@@ -18,7 +18,7 @@
       <app-meet 
         placeholder="Miejsce zwrotu" 
         [meet]="order.dropOff" 
-        [cities]="order.cities">
+        [cities]="cities">
       </app-meet>
     </div>
     <div class="order-row order-button">

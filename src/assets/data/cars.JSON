@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Fiat 500",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-pincet.png",
+        "pricePerDay": 95,
+        "group": "A+",
+        "deposit": 400,
+        "gearbox": "Manualna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "ABS", "Wspomaganie_Kierownicy", 
+                        "Centralny_Zamek", "Poduszki_Powietrzne", "4_osobowy"]
+    },
+    {
+        "name": "Citroën C3",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-citroen-c3-01.png",
+        "pricePerDay": 99,
+        "group": "B",
+        "deposit": 500,
+        "gearbox": "Manualna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "ABS", "Wspomaganie_Kierownicy", 
+                        "Centralny_Zamek", "Poduszki_Powietrzne", "5_osobowy", "5_drzwiowy"]
+    },
+    {
+        "name": "SMART forfour",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-smart18.png",
+        "pricePerDay": 99,
+        "group": "B",
+        "deposit": 500,
+        "gearbox": "Automatyczna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "ABS", "Wspomaganie_Kierownicy", 
+                        "Poduszki_Powietrzne", "4_osobowy", "4_drzwiowy"]
+    },
+    {
+        "name": "Seat Leon FR",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-leon5d-18.png",
+        "pricePerDay": 159,
+        "group": "C+",
+        "deposit": 600,
+        "gearbox": "Manualna",
+        "restEquipment": ["Klimatyzacja", "Benzyna_lub_Diesel", "ABS", "Wspomaganie_Kierownicy", 
+                        "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy"]
+    },
+    {
+        "name": "Kia Cee'd",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-kia-ceed-1-automat.png",
+        "pricePerDay": 159,
+        "group": "C+",
+        "deposit": 600,
+        "gearbox": "Automatyczna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "Wspomaganie_Kierownicy", 
+                        "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy", "5_osobowy"]
+    },
+    {
+        "name": "Hyundai i30",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-i30.png",
+        "pricePerDay": 159,
+        "group": "C",
+        "deposit": 600,
+        "gearbox": "Manualna",
+        "restEquipment": ["Klimatyzacja", "Benzyna_lub_Diesel", "Wspomaganie_Kierownicy", 
+                        "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy", "5_osobowy"]
+    }
+]

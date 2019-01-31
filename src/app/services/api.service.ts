@@ -12,4 +12,8 @@ export class ApiService {
   public getCities(): Observable<any> {
     return this.http.get('assets/data/cities.JSON');
   }
+
+  public getCars(): Observable<any> {
+    return this.http.get('assets/data/cars.JSON');
+  }
 }

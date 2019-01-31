@@ -9,14 +9,10 @@ import { Meet } from '../booking/meet/meet';
 })
 export class OrderService {
 
-  public cities: Array<string>;
   public pickUp: Meet;
   public dropOff: Meet;
 
   constructor(private api: ApiService) {
-    this.api.getCities().subscribe(cities => {
-      this.cities = cities;
-    });
 
     this.pickUp = new Meet(1);
     this.dropOff = new Meet(2);

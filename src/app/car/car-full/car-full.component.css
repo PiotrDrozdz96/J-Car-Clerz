@@ -1,0 +1,77 @@
+.car-row {
+    background-image: url('https://carnet.pl/themes/cn/images/car_background_configuration.png');
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.column {
+    float: left;
+}
+
+.name {
+    font-size: 50px;
+    margin: 5px;
+}
+
+.group {
+    color: #c2185b;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.equipments {
+    width: 400px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+
+.equipment {
+    width: 200px;
+    margin: 7px 0;
+}
+
+.equipment p{
+    margin: 0 1px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0px 10px;
+}
+
+.costs {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.costs p {
+    margin: 4px 0;
+    text-align: right;
+}
+
+.costs button {
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 40px;
+    margin: 0;
+}
+
+.brutto {
+    font-size: 20px;
+}
+
+.deposit {
+    color: #c2185b;
+    font-size: 15px;
+}

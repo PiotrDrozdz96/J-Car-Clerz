@@ -1,0 +1,23 @@
+<div class="car-row">
+  <div class="car-basic column">
+    <p class="name">{{car.name}}</p>
+    <p class="group">Grupa {{car.group}}</p>
+    <img [src]="car.image">
+  </div>
+  <div class="equipments">
+    <div class="equipment">
+      <img class="icon" [src]="equipmentIcon[car.gearbox]">
+      <p>{{car.gearbox}}</p>
+    </div>
+    <div class="equipment" *ngFor="let equipment of car.restEquipment">
+      <img class="icon" [src]="equipmentIcon[equipment]">
+      <p>{{equipment.replace('_', ' ')}}</p>
+    </div>
+  </div>
+  <div class="costs">
+    <p class="price">{{car.pricePerDay}} zł</p>
+    <p class="brutto">brutto</p>
+    <p class="deposit">Kaucja zwrotna {{car.deposit}} zł brutto</p>
+    <button mat-raised-button color="primary" [routerLink]="['/Booking/Step2']">Wybierz</button>
+  </div>
+</div>

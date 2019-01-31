@@ -20,6 +20,12 @@ import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './booking/order/order.component';
 import { OrderBarComponent } from './booking/order-bar/order-bar.component';
 import { MeetComponent } from './booking/meet/meet.component';
+import { BookingComponent } from './booking/booking.component';
+import { Step1Component } from './booking/step1/step1.component';
+import { Step2Component } from './booking/step2/step2.component';
+
+import { CarsOrderListComponent } from './car/cars-order-list/cars-order-list.component';
+import { CarFullComponent } from './car/car-full/car-full.component';
 
 import { OrderService } from './services/order.service';
 
@@ -30,7 +36,12 @@ import { OrderService } from './services/order.service';
     HomeComponent,
     OrderComponent,
     OrderBarComponent,
-    MeetComponent
+    MeetComponent,
+    BookingComponent,
+    Step1Component,
+    Step2Component,
+    CarsOrderListComponent,
+    CarFullComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +57,10 @@ import { OrderService } from './services/order.service';
     MatNativeDateModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'Booking', component: OrderBarComponent },
+      { path: 'Booking', component: BookingComponent, children: [
+          { path: 'Step1', component: Step1Component },
+          { path: 'Step2', component: Step2Component }
+      ]},
     ], { useHash: true })
   ],
   providers: [MatDatepickerModule, OrderService],

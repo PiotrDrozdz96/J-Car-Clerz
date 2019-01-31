@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, fromEvent } from 'rxjs';
+import { Router } from '@angular/router';
 
 import { NavbarItem } from './navbarItem';
-import { Observable, fromEvent } from 'rxjs';
+
 
 @Component({
   selector: 'app-nav',
@@ -13,7 +15,7 @@ export class NavComponent implements OnInit {
   onItem: any;
   list: Array<NavbarItem>;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.list = [
@@ -52,7 +54,7 @@ export class NavComponent implements OnInit {
     ];
   }
 
-  secondClick() {
+  public secondClick() {
     let on = false;
     const observable = fromEvent(window, 'click').subscribe((event: MouseEvent) => {
       if (on) {
@@ -63,6 +65,10 @@ export class NavComponent implements OnInit {
         }
       } else { on = true; }
     });
+  }
+
+  public goHome() {
+    this.router.navigate(['']);
   }
 
 }

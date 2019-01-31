@@ -46,6 +46,7 @@
 
 .logo {
     margin-top: 6px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 570px) {
