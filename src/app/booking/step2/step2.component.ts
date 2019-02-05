@@ -14,6 +14,7 @@ import { ApiService } from '../../services/api.service';
 export class Step2Component implements OnInit {
 
   order: Order;
+  requirments: Array<boolean> = [false, false];
 
   constructor(public orderService: OrderService, private router: Router, private api: ApiService) {
     if (!this.orderService.car) {

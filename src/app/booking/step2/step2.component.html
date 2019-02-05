@@ -33,8 +33,16 @@
 </div>
 <div class="summary">
     <div class="summary-container">
-        <div class="smaller">Suma</div>
-        {{getTotalCost(order.costs)}} zł brutto<br>
-        <button class="booking-button" mat-raised-button color="accent" (click)="booking()">Rezerwuj</button>
+        <div>
+            <mat-checkbox [(ngModel)]="requirments[0]"></mat-checkbox>
+            <p class="summary-requirements">Potwierdzam że mam 21 lat.</p><br>
+            <mat-checkbox [(ngModel)]="requirments[1]"></mat-checkbox>
+            <p class="summary-requirements">Potwierdzam że posiadam prawo jazdy minimum 2 lata.</p>
+        </div>
+        <div class="summary-price">
+            <div class="smaller">Suma</div>
+            {{getTotalCost(order.costs)}} zł brutto<br>
+            <button class="booking-button" mat-raised-button color="accent" [disabled]="!(requirments[0] && requirments[1])" (click)="booking()">Rezerwuj</button>
+        </div>
     </div>
 </div>
