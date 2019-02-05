@@ -1,6 +1,6 @@
 [
-    "Kalwaria Zebrzydowska ul. Krakowska 50",
-    "Kraków ul. Hutnicza 20",
-    "Katowice ul. Krakowska 15",
-    "Wrocław ul. Niemiecka 168"
+    {"id": "place1", "name": "Kalwaria Zebrzydowska ul. Krakowska 50"},
+    {"id": "place2", "name": "Kraków ul. Hutnicza 20"},
+    {"id": "place3", "name": "Katowice ul. Krakowska 15"},
+    {"id": "place4", "name": "Wrocław ul. Niemiecka 168"}
 ]

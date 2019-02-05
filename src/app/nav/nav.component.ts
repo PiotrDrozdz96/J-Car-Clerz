@@ -21,25 +21,18 @@ export class NavComponent implements OnInit {
     this.list = [
       {
         title: 'Oferta', dropdown: [
-          { title: 'Wynajem', href: '/Wynajem' },
+          { title: 'Flota - Cennik z VAT', href: 'flota' },
+          { title: 'Wynajem', href: 'wynajem' },
           { title: 'Warunki wynajmu', href: 'warunki-wynajmu' }
         ]
       },
       {
         title: 'Promocje', dropdown: [
-          { title: 'Promocja1', href: '' },
-          { title: 'Promocja2', href: '' },
-          { title: 'Promocja3', href: '' },
-          { title: 'Promocja4', href: '' }
+          { title: 'Nie ma promocji xD', href: '' },
         ]
       },
       {
-        title: 'Flota', dropdown: [
-          { title: 'Osobowe', href: '' },
-          { title: 'Automaty', href: '' },
-          { title: 'VAN', href: '' },
-          { title: 'Dostawcze', href: '' }
-        ]
+        title: 'Flota', href: 'flota'
       },
       {
         title: 'O firmie', dropdown: [

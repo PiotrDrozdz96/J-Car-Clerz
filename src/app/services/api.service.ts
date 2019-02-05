@@ -1,22 +1,39 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 import { Order } from '../booking/Order';
+import { Car } from '../car/car';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+
+   }
 
   public getCities(): Observable<any> {
     return this.http.get('assets/data/cities.JSON');
   }
 
-  public getCars(): Observable<any> {
-    return this.http.get('assets/data/cars.JSON');
+  public getCars(): Observable<Array<Car>> {
+    const cars: BehaviorSubject<Array<Car>> = new BehaviorSubject<Array<Car>>([]);
+    this.http.get('assets/data/fleet/place1.JSON').subscribe(carsId => {
+      this.http.get('assets/data/cars.JSON').subscribe(carsBase => {
+       cars.next((carsId as Array<string>).map(id => carsBase[id]));
+      });
+    });
+    return cars;
+  }
+
+  public getCar(id: string): Observable<Car> {
+    const car: BehaviorSubject<Car> = new BehaviorSubject<Car>(undefined);
+    this.http.get('assets/data/cars.JSON').subscribe(cars => {
+      car.next(cars[id]);
+    });
+    return car;
   }
 
   public calculateOrder(order: Order): Order {

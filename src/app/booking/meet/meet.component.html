@@ -1,6 +1,6 @@
 <div class="select">
   <mat-select [placeholder]="placeholder" [(value)]="meet.place" (selectionChange)="change()">
-    <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+    <mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>
   </mat-select>
 </div>
 <input class="calendar" matInput disabled [min]="meet.minDate" [matDatepicker]="dp1" [formControl]="meet.date" (dateChange)="change()">

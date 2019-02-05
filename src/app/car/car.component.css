@@ -1,3 +1,11 @@
+.car-list {
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
 .car-row {
     background-image: url('https://carnet.pl/themes/cn/images/car_background_configuration.png');
     width: 100%;
@@ -5,6 +13,11 @@
     display: flex;
     justify-content: center;
     padding-top: 70px;
+}
+
+.car {
+    height: 258px;
+    margin: 40px;
 }
 
 .column {
@@ -48,9 +61,13 @@
 }
 
 .costs {
+    width: 200px;
     display: flex;
     flex-direction: column;
-    width: 200px;
+}
+
+.costs-down {
+    padding-top: 50px;
 }
 
 .costs p {

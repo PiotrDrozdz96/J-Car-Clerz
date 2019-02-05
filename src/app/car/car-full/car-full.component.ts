@@ -8,7 +8,7 @@ import { OrderService } from '../../services/order.service';
 @Component({
   selector: 'app-car-full',
   templateUrl: './car-full.component.html',
-  styleUrls: ['./car-full.component.css']
+  styleUrls: ['../car.component.css']
 })
 export class CarFullComponent implements OnInit {
 

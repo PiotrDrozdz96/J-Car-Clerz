@@ -32,6 +32,9 @@ import { Step1Component } from './booking/step1/step1.component';
 import { Step2Component } from './booking/step2/step2.component';
 
 import { CarFullComponent } from './car/car-full/car-full.component';
+import { CarPriceComponent } from './car/car-price/car-price.component';
+import { CarListComponent } from './car/car-list/car-list.component';
+import { CarComponent } from './car/car.component';
 
 import { OrderService } from './services/order.service';
 import { RentRequirementsComponent } from './informations/rent-requirements/rent-requirements.component';
@@ -48,9 +51,12 @@ import { RentRequirementsComponent } from './informations/rent-requirements/rent
     Step1Component,
     Step2Component,
     CarFullComponent,
+    CarPriceComponent,
+    CarListComponent,
+    CarComponent,
     ListComponent,
     RentComponent,
-    RentRequirementsComponent
+    RentRequirementsComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,8 +79,10 @@ import { RentRequirementsComponent } from './informations/rent-requirements/rent
           { path: 'Step1', component: Step1Component },
           { path: 'Step2', component: Step2Component }
       ]},
-      { path: 'Wynajem', component: RentComponent},
-      { path: 'warunki-wynajmu', component: RentRequirementsComponent}
+      { path: 'wynajem', component: RentComponent},
+      { path: 'warunki-wynajmu', component: RentRequirementsComponent},
+      { path: 'flota', component: CarListComponent},
+      { path: 'car/:car', component: CarComponent}
     ], { useHash: true })
   ],
   providers: [MatDatepickerModule, OrderService],

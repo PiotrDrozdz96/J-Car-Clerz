@@ -1,5 +1,6 @@
-[
-    {
+{
+    "fiat_500": {
+        "id": "fiat_500",
         "name": "Fiat 500",
         "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-pincet.png",
         "pricePerDay": 95,
@@ -9,7 +10,8 @@
         "restEquipment": ["Klimatyzacja", "Benzyna", "ABS", "Wspomaganie_Kierownicy", 
                         "Centralny_Zamek", "Poduszki_Powietrzne", "4_osobowy"]
     },
-    {
+    "citroen_c3": {
+        "id": "citroen_c3",
         "name": "Citroën C3",
         "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-citroen-c3-01.png",
         "pricePerDay": 99,
@@ -19,7 +21,8 @@
         "restEquipment": ["Klimatyzacja", "Benzyna", "ABS", "Wspomaganie_Kierownicy", 
                         "Centralny_Zamek", "Poduszki_Powietrzne", "5_osobowy", "5_drzwiowy"]
     },
-    {
+    "smart_fortfour": {
+        "id": "smart_fortfour",
         "name": "SMART forfour",
         "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-smart18.png",
         "pricePerDay": 99,
@@ -29,7 +32,8 @@
         "restEquipment": ["Klimatyzacja", "Benzyna", "ABS", "Wspomaganie_Kierownicy", 
                         "Poduszki_Powietrzne", "4_osobowy", "4_drzwiowy"]
     },
-    {
+    "sean_leon_fr": {
+        "id": "sean_leon_fr",
         "name": "Seat Leon FR",
         "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-leon5d-18.png",
         "pricePerDay": 159,
@@ -39,7 +43,8 @@
         "restEquipment": ["Klimatyzacja", "Benzyna_lub_Diesel", "ABS", "Wspomaganie_Kierownicy", 
                         "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy"]
     },
-    {
+    "kia_ceed": {
+        "id": "kia_ceed",
         "name": "Kia Cee'd",
         "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-kia-ceed-1-automat.png",
         "pricePerDay": 159,
@@ -49,7 +54,8 @@
         "restEquipment": ["Klimatyzacja", "Benzyna", "Wspomaganie_Kierownicy", 
                         "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy", "5_osobowy"]
     },
-    {
+    "hyundai_i30": {
+        "id": "hyundai_i30",
         "name": "Hyundai i30",
         "image": "https://carnet.pl/assets/Car/_resampled/SetWidth368-i30.png",
         "pricePerDay": 159,
@@ -59,4 +65,4 @@
         "restEquipment": ["Klimatyzacja", "Benzyna_lub_Diesel", "Wspomaganie_Kierownicy", 
                         "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy", "5_osobowy"]
     }
-]
+}
