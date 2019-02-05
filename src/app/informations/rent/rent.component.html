@@ -4,13 +4,5 @@
 <div class="title2">Krótka instrukcja rezerwacji on-line</div>
 <div class="information-row">
   <img src="https://carnet.pl/assets/Uploads/_resampled/ResizedImage600399-Online-Payment.jpeg">
-  <div class="list">
-    <mat-list>
-      <h2>Rezerwacja samochodu online</h2>
-      <mat-list-item *ngFor="let item of list">
-        <mat-icon mat-list-icon>stop</mat-icon>
-        <p>{{item}}</p>
-      </mat-list-item>
-    </mat-list>
-  </div>
+  <app-list [header]="'Rezerwacja samochodu online'" [list]="list"></app-list>
 </div>

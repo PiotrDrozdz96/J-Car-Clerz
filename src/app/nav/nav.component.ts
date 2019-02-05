@@ -22,9 +22,7 @@ export class NavComponent implements OnInit {
       {
         title: 'Oferta', dropdown: [
           { title: 'Wynajem', href: '/Wynajem' },
-          { title: 'Oferta2', href: '' },
-          { title: 'Oferta3', href: '' },
-          { title: 'Oferta4', href: '' }
+          { title: 'Warunki wynajmu', href: 'warunki-wynajmu' }
         ]
       },
       {

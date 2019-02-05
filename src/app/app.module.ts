@@ -21,6 +21,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 
+import { ListComponent } from './informations/list/list.component';
 import { RentComponent } from './informations/rent/rent.component';
 
 import { OrderComponent } from './booking/order/order.component';
@@ -33,6 +34,7 @@ import { Step2Component } from './booking/step2/step2.component';
 import { CarFullComponent } from './car/car-full/car-full.component';
 
 import { OrderService } from './services/order.service';
+import { RentRequirementsComponent } from './informations/rent-requirements/rent-requirements.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { OrderService } from './services/order.service';
     Step1Component,
     Step2Component,
     CarFullComponent,
-    RentComponent
+    ListComponent,
+    RentComponent,
+    RentRequirementsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,8 @@ import { OrderService } from './services/order.service';
           { path: 'Step1', component: Step1Component },
           { path: 'Step2', component: Step2Component }
       ]},
-      { path: 'Wynajem', component: RentComponent}
+      { path: 'Wynajem', component: RentComponent},
+      { path: 'warunki-wynajmu', component: RentRequirementsComponent}
     ], { useHash: true })
   ],
   providers: [MatDatepickerModule, OrderService],
