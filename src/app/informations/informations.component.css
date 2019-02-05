@@ -21,9 +21,11 @@
 }
 
 .information-row {
-    width: 1217px;
+    max-width: 1217px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .list {
