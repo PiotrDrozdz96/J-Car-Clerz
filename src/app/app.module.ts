@@ -11,12 +11,17 @@ import {
   MatSelectModule,
   MatOptionModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatListModule,
+  MatIconModule,
+  MatIcon
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+
+import { RentComponent } from './informations/rent/rent.component';
 
 import { OrderComponent } from './booking/order/order.component';
 import { OrderBarComponent } from './booking/order-bar/order-bar.component';
@@ -40,7 +45,8 @@ import { OrderService } from './services/order.service';
     BookingComponent,
     Step1Component,
     Step2Component,
-    CarFullComponent
+    CarFullComponent,
+    RentComponent
   ],
   imports: [
     BrowserModule,
@@ -55,12 +61,15 @@ import { OrderService } from './services/order.service';
     MatOptionModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatIconModule,
+    MatListModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'Booking', component: BookingComponent, children: [
           { path: 'Step1', component: Step1Component },
           { path: 'Step2', component: Step2Component }
       ]},
+      { path: 'Wynajem', component: RentComponent}
     ], { useHash: true })
   ],
   providers: [MatDatepickerModule, OrderService],

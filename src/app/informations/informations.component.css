@@ -1,0 +1,36 @@
+.title-bar {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 99px;
+}
+
+.title {
+    width: 1217px;
+    font-size: 50px;
+    margin: 0 auto;
+    line-height: 99px;
+}
+
+.title2 {
+    font-size: 36px;
+    margin: auto;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.information-row {
+    width: 1217px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.list {
+    width: 560px;
+    padding: 20px;
+}
+
+.mat-icon {
+    color: #c2185b;
+}

@@ -21,7 +21,7 @@ export class NavComponent implements OnInit {
     this.list = [
       {
         title: 'Oferta', dropdown: [
-          { title: 'Oferta1', href: '' },
+          { title: 'Wynajem', href: '/Wynajem' },
           { title: 'Oferta2', href: '' },
           { title: 'Oferta3', href: '' },
           { title: 'Oferta4', href: '' }
