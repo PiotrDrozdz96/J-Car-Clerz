@@ -27,6 +27,7 @@ export class Step2Component implements OnInit {
       this.order = this.orderService.makeOrder();
       this.order.costs.additionalCostsOnDemand = demand;
     });
+    window.scrollTo(0, 0);
   }
 
   ngOnInit() {
