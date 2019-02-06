@@ -1,3 +1,10 @@
+.page {
+    width: 100%;
+    background-image: url('https://carnet.pl/themes/cn/images/car_background_configuration.png');
+    background-size: 100% 330px;
+    background-repeat: repeat;
+}
+
 .car-list {
     max-width: 1300px;
     display: flex;
@@ -91,4 +98,20 @@
 .deposit {
     color: #c2185b;
     font-size: 15px;
+}
+
+.button-row {
+    max-width: 1300px;
+    text-align: right;
+}
+
+.button-row > *, .button-row > a > * {
+    float: right;
+    margin: 0px 5px;
+    line-height: 50px;
+}
+
+.button-row > a {
+    text-decoration: none;
+    color: #c2185b;
 }
