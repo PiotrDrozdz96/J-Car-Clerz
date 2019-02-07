@@ -28,3 +28,17 @@ export interface AdditionalCost {
 export interface AdditionalCostOnDemand extends AdditionalCost {
     demand: boolean;
 }
+
+export interface Person {
+    name: string;
+    surname: string;
+    email: string;
+    PESEL: string;
+    phone: string;
+    idCardNumber: string;
+}
+
+export interface Reservation {
+    order: Order;
+    person: Person;
+}

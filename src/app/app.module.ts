@@ -7,7 +7,9 @@ import { RouterModule } from '@angular/router';
 import {
   MatButtonModule,
   MatMenuModule,
+  MatFormFieldModule,
   MatCheckboxModule,
+  MatInputModule,
   MatSelectModule,
   MatOptionModule,
   MatDatepickerModule,
@@ -30,9 +32,11 @@ import { MeetComponent } from './booking/meet/meet.component';
 import { BookingComponent } from './booking/booking.component';
 import { Step1Component } from './booking/step1/step1.component';
 import { Step2Component } from './booking/step2/step2.component';
+import { Step3Component } from './booking/step3/step3.component';
 
 import { CarFullComponent } from './car/car-full/car-full.component';
 import { CarPriceComponent } from './car/car-price/car-price.component';
+import { CarSummaryComponent } from './car/car-summary/car-summary.component';
 import { CarListComponent } from './car/car-list/car-list.component';
 import { CarComponent } from './car/car.component';
 
@@ -50,8 +54,10 @@ import { RentRequirementsComponent } from './informations/rent-requirements/rent
     BookingComponent,
     Step1Component,
     Step2Component,
+    Step3Component,
     CarFullComponent,
     CarPriceComponent,
+    CarSummaryComponent,
     CarListComponent,
     CarComponent,
     ListComponent,
@@ -65,9 +71,11 @@ import { RentRequirementsComponent } from './informations/rent-requirements/rent
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
+    MatFormFieldModule,
     MatMenuModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatInputModule,
     MatOptionModule,
     MatDatepickerModule,
     MatNativeDateModule,
@@ -75,6 +83,7 @@ import { RentRequirementsComponent } from './informations/rent-requirements/rent
     MatListModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'Booking/Step3', component: Step3Component},
       { path: 'Booking', component: BookingComponent, children: [
           { path: 'Step1', component: Step1Component },
           { path: 'Step2', component: Step2Component }

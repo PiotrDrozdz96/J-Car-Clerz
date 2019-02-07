@@ -4,7 +4,7 @@ import { ApiService } from './api.service';
 
 import { Meet } from '../booking/meet/meet';
 import { Car } from '../car/car';
-import { Order } from '../booking/Order';
+import { Order, Reservation } from '../booking/Order';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,8 @@ export class OrderService {
   public dropOff: Meet;
 
   public car: Car;
+
+  public reservation: Reservation;
 
   public change: EventEmitter<void> = new EventEmitter();
 
@@ -48,5 +50,19 @@ export class OrderService {
         place: this.dropOff.place
       }
     });
+  }
+
+  public prepareReservation(order: Order) {
+    this.reservation = {
+      order: order,
+      person: {
+        name: '',
+        surname: '',
+        email: '',
+        PESEL: '',
+        phone: '',
+        idCardNumber: ''
+      }
+    };
   }
 }

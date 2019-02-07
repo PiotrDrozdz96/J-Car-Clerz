@@ -1,0 +1,12 @@
+<div class="car">
+  <div class="car-basic column">
+    <p class="name">{{order.car.name}}</p>
+    <p class="group">Grupa {{order.car.group}}</p>
+    <img [src]="order.car.image">
+  </div>
+  <div class="costs costs-down">
+    <p class="price">{{getTotalCost()}} zł</p>
+    <p class="brutto">brutto</p>
+    <p class="deposit">Kaucja zwrotna {{order.car.deposit}} zł brutto</p>
+  </div>
+</div>

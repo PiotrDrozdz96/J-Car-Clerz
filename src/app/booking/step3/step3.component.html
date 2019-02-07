@@ -1,0 +1,37 @@
+<div class="page">
+  <div class="form">
+    <mat-form-field>
+      <input matInput placeholder="Imię" [(ngModel)]="order.reservation.person.name" required>
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nazwisko" [(ngModel)]="order.reservation.person.surname" required>
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="PESEL" [(ngModel)]="order.reservation.person.PESEL" required>
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="numer dowodu osobistego" [(ngModel)]="order.reservation.person.idCardNumber" required>
+      <mat-icon matSuffix>credit_card</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="email" [(ngModel)]="order.reservation.person.email">
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="numer telefonu" [(ngModel)]="order.reservation.person.phone" required>
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <app-car-summary [order]="order.reservation.order"></app-car-summary>
+    <mat-checkbox [(ngModel)]="requirments[0]"></mat-checkbox>
+    <p class="summary-requirements">Potwierdzam że mam 21 lat.</p>
+    <br>
+    <mat-checkbox [(ngModel)]="requirments[1]"></mat-checkbox>
+    <p class="summary-requirements">Potwierdzam że posiadam prawo jazdy minimum 2 lata.</p><br>
+    <button class="booking-button" mat-raised-button color="accent" [disabled]="!ready()" (click)="booking()">Rezerwuj</button>
+  </div>
+</div>

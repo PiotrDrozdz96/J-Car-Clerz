@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 
-import { Order } from '../booking/Order';
+import { Order, Reservation } from '../booking/Order';
 import { Car } from '../car/car';
 
 @Injectable({
@@ -69,8 +69,8 @@ export class ApiService {
     return order;
   }
 
-  public booking(order: Order) {
-    console.log(order);
+  public booking(reservation: Reservation) {
+    console.log(reservation);
   }
 }
 
