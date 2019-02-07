@@ -4,65 +4,59 @@ import { ApiService } from './api.service';
 
 import { Meet } from '../booking/meet/meet';
 import { Car } from '../car/car';
-import { Order, Reservation } from '../booking/Order';
+import { Order, Reservation, SimpleMeet, Person } from '../booking/Order';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
 
-  public pickUp: Meet;
-  public dropOff: Meet;
-
-  public car: Car;
-
-  public reservation: Reservation;
+  public order = new Order();
+  public person = new Person();
 
   public change: EventEmitter<void> = new EventEmitter();
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService) { }
 
-    this.pickUp = new Meet(1);
-    this.dropOff = new Meet(2);
+  public setPickUp(meet: SimpleMeet) {
+    this.order.pickUp = meet;
+    this.change.emit();
   }
 
-  public changeMinEnd(): void {
-    this.dropOff.setMin(this.pickUp.date.value.getDate() + 1);
+  public getPickUp(): SimpleMeet {
+    return this.order.pickUp;
   }
 
-  public checkOffer(): boolean {
-    return (this.pickUp.place && this.dropOff.place) ? true : false;
+  public setDropOff(meet: SimpleMeet) {
+    this.order.dropOff = meet;
+    this.change.emit();
+  }
+
+  public getDropOff(): SimpleMeet {
+    return this.order.dropOff;
   }
 
   public setCar(car: Car) {
-    this.car = car;
+    this.order.car = car;
+  }
+
+  public getCar(): Car {
+    return this.order.car;
+  }
+
+  public checkPlaces(): boolean {
+    return (this.order.pickUp.place && this.order.dropOff.place) ? true : false;
   }
 
   public makeOrder(): Order {
-    return this.api.calculateOrder({
-      car: this.car,
-      pickUp: {
-        date: this.pickUp.date.value,
-        place: this.pickUp.place
-      },
-      dropOff: {
-        date: this.dropOff.date.value,
-        place: this.dropOff.place
-      }
-    });
+    return this.order = this.api.calculateOrder(this.order);
   }
 
-  public prepareReservation(order: Order) {
-    this.reservation = {
-      order: order,
-      person: {
-        name: '',
-        surname: '',
-        email: '',
-        PESEL: '',
-        phone: '',
-        idCardNumber: ''
-      }
+  public getReservation(): Reservation {
+    return {
+      order: this.order,
+      person: this.person
     };
   }
+
 }

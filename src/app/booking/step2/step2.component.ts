@@ -14,10 +14,9 @@ import { ApiService } from '../../services/api.service';
 export class Step2Component implements OnInit {
 
   order: Order;
-  requirments: Array<boolean> = [false, false];
 
   constructor(public orderService: OrderService, private router: Router) {
-    if (!this.orderService.car) {
+    if (!this.orderService.getCar()) {
       this.router.navigate(['']);
     } else {
       this.order = this.orderService.makeOrder();
@@ -47,7 +46,6 @@ export class Step2Component implements OnInit {
   }
 
   public booking() {
-    this.orderService.prepareReservation(this.order);
     this.router.navigate(['/Booking/Step3']);
   }
 

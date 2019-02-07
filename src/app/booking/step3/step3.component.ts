@@ -16,7 +16,7 @@ export class Step3Component implements OnInit {
   public requirments = [false, false];
 
   constructor(private router: Router, private api: ApiService, public order: OrderService) {
-    if (!this.order.reservation) {
+    if (!(this.order.checkPlaces() && this.order.getCar())) {
       this.router.navigate(['']);
     }
   }
@@ -25,13 +25,13 @@ export class Step3Component implements OnInit {
   }
 
   ready(): boolean {
-    const person = this.order.reservation.person;
+    const person = this.order.person;
     const keys = ['name', 'surname', 'PESEL', 'phone'];
     return this.requirments[0] && this.requirments[1] && keys.every(key => person[key] !== '');
   }
 
   booking() {
-    this.api.booking(this.order.reservation);
+    this.api.booking(this.order.getReservation());
   }
 
 }
