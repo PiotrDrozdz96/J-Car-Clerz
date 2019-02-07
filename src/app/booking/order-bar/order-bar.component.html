@@ -3,18 +3,18 @@
     <p class="title">Odbiór: </p>
     <app-meet 
         placeholder="Miejsce Odbioru" 
-        [meet]="order.pickUp" 
+        [meet]="pickUp" 
         [cities]="cities" 
-        (changeEmitter)="change()">
+        (changeEmitter)="pickUpChange()">
       </app-meet>
   </div>
   <div class="order-row">
     <p class="title">Zwrot: </p>
       <app-meet 
         placeholder="Miejsce zwrotu" 
-        [meet]="order.dropOff" 
+        [meet]="dropOff" 
         [cities]="cities"
-        (changeEmitter)="change()">
+        (changeEmitter)="dropOffChange()">
       </app-meet>
   </div>
 </div>

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { Order, AdditionalCost, AdditionalCostOnDemand, Costs } from '../Order';
 
-import { OrderService } from '../../services/order.service';
+import { ReservationService } from '../../services/reservation.service';
 import { ApiService } from '../../services/api.service';
 
 @Component({
@@ -14,17 +14,16 @@ import { ApiService } from '../../services/api.service';
 export class Step2Component implements OnInit {
 
   order: Order;
-  requirments: Array<boolean> = [false, false];
 
-  constructor(public orderService: OrderService, private router: Router) {
-    if (!this.orderService.car) {
+  constructor(public reservation: ReservationService, private router: Router) {
+    if (!this.reservation.getCar()) {
       this.router.navigate(['']);
     } else {
-      this.order = this.orderService.makeOrder();
+      this.order = this.reservation.makeOrder();
     }
-    this.orderService.change.subscribe(() => {
+    this.reservation.change.subscribe(() => {
       const demand = this.order.costs.additionalCostsOnDemand;
-      this.order = this.orderService.makeOrder();
+      this.order = this.reservation.makeOrder();
       this.order.costs.additionalCostsOnDemand = demand;
     });
     window.scrollTo(0, 0);
@@ -47,7 +46,6 @@ export class Step2Component implements OnInit {
   }
 
   public booking() {
-    this.orderService.prepareReservation(this.order);
     this.router.navigate(['/Booking/Step3']);
   }
 

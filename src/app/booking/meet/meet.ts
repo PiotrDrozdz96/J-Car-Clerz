@@ -1,4 +1,5 @@
 import { FormControl } from '@angular/forms';
+import { SimpleMeet } from '../Order';
 
 export class Meet {
     minDate: Date;
@@ -6,11 +7,18 @@ export class Meet {
     hours: string;
     place: string;
 
-    constructor(min: number) {
-        this.minDate = new Date();
-        this.minDate.setDate((new Date().getDate() + min));
-        this.date = new FormControl(this.minDate);
+    constructor(meet: SimpleMeet) {
+        this.minDate = meet.date;
+        this.date = new FormControl(meet.date);
         this.hoursReset();
+        this.place = meet.place;
+    }
+
+    public getSimpleMeet(): SimpleMeet {
+        return {
+            date: this.date.value,
+            place: this.place
+        };
     }
 
     public checkHours() {
