@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { OrderService } from '../../services/order.service';
+import { ReservationService } from '../../services/reservation.service';
 import { ApiService } from '../../services/api.service';
 
 import { OrderComponent } from '../order/order.component';
@@ -17,9 +17,9 @@ export class OrderBarComponent extends OrderComponent {
 
   public cities: Array<string>;
 
-  constructor(public order: OrderService, public api: ApiService, public router: Router) {
-    super(order, api, router);
-    if (!this.order.checkPlaces()) {
+  constructor(public reservation: ReservationService, public api: ApiService, public router: Router) {
+    super(reservation, api, router);
+    if (!this.reservation.checkPlaces()) {
       this.router.navigate(['']);
     }
 
@@ -27,9 +27,8 @@ export class OrderBarComponent extends OrderComponent {
       this.cities = cities;
     });
 
-    this.dropOff = new Meet(this.order.getDropOff());
-    this.pickUp = new Meet(this.order.getPickUp());
-    console.log(this.order.getDropOff());
+    this.dropOff = new Meet(this.reservation.getDropOff());
+    this.pickUp = new Meet(this.reservation.getPickUp());
 
   }
 

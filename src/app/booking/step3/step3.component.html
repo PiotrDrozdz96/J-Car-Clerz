@@ -1,32 +1,32 @@
 <div class="page">
   <div class="form">
     <mat-form-field>
-      <input matInput placeholder="Imię" [(ngModel)]="order.person.name" required>
+      <input matInput placeholder="Imię" [(ngModel)]="reservation.person.name" required>
       <mat-icon matSuffix>perm_identity</mat-icon>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Nazwisko" [(ngModel)]="order.person.surname" required>
+      <input matInput placeholder="Nazwisko" [(ngModel)]="reservation.person.surname" required>
       <mat-icon matSuffix>perm_identity</mat-icon>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="PESEL" [(ngModel)]="order.person.PESEL" required>
+      <input matInput placeholder="PESEL" [(ngModel)]="reservation.person.PESEL" required>
       <mat-icon matSuffix>perm_identity</mat-icon>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="numer dowodu osobistego" [(ngModel)]="order.person.idCardNumber" required>
+      <input matInput placeholder="numer dowodu osobistego" [(ngModel)]="reservation.person.idCardNumber" required>
       <mat-icon matSuffix>credit_card</mat-icon>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="email" [(ngModel)]="order.person.email">
+      <input matInput placeholder="email" [(ngModel)]="reservation.person.email">
       <mat-icon matSuffix>email</mat-icon>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="numer telefonu" [(ngModel)]="order.person.phone" required>
+      <input matInput placeholder="numer telefonu" [(ngModel)]="reservation.person.phone" required>
       <mat-icon matSuffix>phone</mat-icon>
     </mat-form-field>
   </div>
   <div>
-    <app-car-summary [order]="order.order"></app-car-summary>
+    <app-car-summary [order]="reservation.order"></app-car-summary>
     <mat-checkbox [(ngModel)]="requirments[0]"></mat-checkbox>
     <p class="summary-requirements">Potwierdzam że mam 21 lat.</p>
     <br>

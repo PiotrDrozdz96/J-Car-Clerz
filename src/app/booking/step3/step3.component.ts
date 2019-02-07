@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { OrderService } from '../../services/order.service';
+import { ReservationService } from '../../services/reservation.service';
 import { ApiService } from '../../services/api.service';
 
 import { Person } from '../Order';
@@ -15,8 +15,8 @@ export class Step3Component implements OnInit {
 
   public requirments = [false, false];
 
-  constructor(private router: Router, private api: ApiService, public order: OrderService) {
-    if (!(this.order.checkPlaces() && this.order.getCar())) {
+  constructor(private router: Router, private api: ApiService, public reservation: ReservationService) {
+    if (!(this.reservation.checkPlaces() && this.reservation.getCar())) {
       this.router.navigate(['']);
     }
   }
@@ -25,13 +25,13 @@ export class Step3Component implements OnInit {
   }
 
   ready(): boolean {
-    const person = this.order.person;
+    const person = this.reservation.person;
     const keys = ['name', 'surname', 'PESEL', 'phone'];
     return this.requirments[0] && this.requirments[1] && keys.every(key => person[key] !== '');
   }
 
   booking() {
-    this.api.booking(this.order.getReservation());
+    this.api.booking(this.reservation.getReservation());
   }
 
 }

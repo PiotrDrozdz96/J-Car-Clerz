@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { OrderService } from '../../services/order.service';
+import { ReservationService } from '../../services/reservation.service';
 import { ApiService } from '../../services/api.service';
 import { Meet } from '../meet/meet';
 
@@ -16,12 +16,12 @@ export class OrderComponent implements OnInit {
   public dropOff: Meet;
   public pickUp: Meet;
 
-  constructor(public order: OrderService, public api: ApiService, public router: Router) {
+  constructor(public reservation: ReservationService, public api: ApiService, public router: Router) {
     api.getCities().subscribe(cities => {
       this.cities = cities;
     });
-    this.dropOff = new Meet(this.order.getDropOff());
-    this.pickUp = new Meet(this.order.getPickUp());
+    this.dropOff = new Meet(this.reservation.getDropOff());
+    this.pickUp = new Meet(this.reservation.getPickUp());
    }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class OrderComponent implements OnInit {
   }
 
   public checkOrder() {
-    if (this.order.checkPlaces()) {
+    if (this.reservation.checkPlaces()) {
       this.router.navigate(['/Booking/Step1']);
     } else {
       alert('Nie wskazano miejsca');
@@ -41,11 +41,11 @@ export class OrderComponent implements OnInit {
 
   public pickUpChange() {
     this.changeMinEnd();
-    this.order.setPickUp(this.pickUp.getSimpleMeet());
+    this.reservation.setPickUp(this.pickUp.getSimpleMeet());
   }
 
   public dropOffChange() {
-    this.order.setDropOff(this.dropOff.getSimpleMeet());
+    this.reservation.setDropOff(this.dropOff.getSimpleMeet());
   }
 
 }

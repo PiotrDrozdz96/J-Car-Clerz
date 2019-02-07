@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Car, EquipmentIcons } from '../car';
-import { OrderService } from '../../services/order.service';
+import { ReservationService } from '../../services/reservation.service';
 
 
 @Component({
@@ -17,13 +17,13 @@ export class CarFullComponent implements OnInit {
 
   public equipmentIcon = new EquipmentIcons();
 
-  constructor(private router: Router, private order: OrderService) { }
+  constructor(private router: Router, private reservation: ReservationService) { }
 
   ngOnInit() {
   }
 
   public choose() {
-    this.order.setCar(this.car);
+    this.reservation.setCar(this.car);
     this.router.navigate(['/Booking/Step2']);
   }
 

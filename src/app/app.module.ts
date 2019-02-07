@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 
 import { ListComponent } from './informations/list/list.component';
 import { RentComponent } from './informations/rent/rent.component';
+import { RentRequirementsComponent } from './informations/rent-requirements/rent-requirements.component';
 
 import { OrderComponent } from './booking/order/order.component';
 import { OrderBarComponent } from './booking/order-bar/order-bar.component';
@@ -40,8 +41,8 @@ import { CarSummaryComponent } from './car/car-summary/car-summary.component';
 import { CarListComponent } from './car/car-list/car-list.component';
 import { CarComponent } from './car/car.component';
 
-import { OrderService } from './services/order.service';
-import { RentRequirementsComponent } from './informations/rent-requirements/rent-requirements.component';
+import { ReservationService } from './services/reservation.service';
+
 
 @NgModule({
   declarations: [
@@ -94,7 +95,7 @@ import { RentRequirementsComponent } from './informations/rent-requirements/rent
       { path: 'car/:car', component: CarComponent}
     ], { useHash: true })
   ],
-  providers: [MatDatepickerModule, OrderService],
+  providers: [MatDatepickerModule, ReservationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

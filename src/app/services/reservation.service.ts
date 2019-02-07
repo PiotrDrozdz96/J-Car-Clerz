@@ -9,7 +9,7 @@ import { Order, Reservation, SimpleMeet, Person } from '../booking/Order';
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
+export class ReservationService {
 
   public order = new Order();
   public person = new Person();
