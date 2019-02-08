@@ -22,6 +22,7 @@ import {
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { ListComponent } from './informations/list/list.component';
 import { RentComponent } from './informations/rent/rent.component';
@@ -49,6 +50,7 @@ import { ReservationService } from './services/reservation.service';
     AppComponent,
     NavComponent,
     HomeComponent,
+    FooterComponent,
     OrderComponent,
     OrderBarComponent,
     MeetComponent,
@@ -63,7 +65,7 @@ import { ReservationService } from './services/reservation.service';
     CarComponent,
     ListComponent,
     RentComponent,
-    RentRequirementsComponent,
+    RentRequirementsComponent
   ],
   imports: [
     BrowserModule,
