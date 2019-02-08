@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { SliderCarsComponent } from './slider/slider-cars/slider-cars.component';
+import { SliderNewsComponent } from './slider/slider-news/slider-news.component';
 
 import { ListComponent } from './informations/list/list.component';
 import { RentComponent } from './informations/rent/rent.component';
@@ -45,6 +46,7 @@ import { CarListComponent } from './car/car-list/car-list.component';
 import { CarComponent } from './car/car.component';
 
 import { ReservationService } from './services/reservation.service';
+import { NewsComponent } from './informations/news/news.component';
 
 
 @NgModule({
@@ -68,7 +70,9 @@ import { ReservationService } from './services/reservation.service';
     ListComponent,
     RentComponent,
     RentRequirementsComponent,
-    SliderCarsComponent
+    SliderCarsComponent,
+    SliderNewsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

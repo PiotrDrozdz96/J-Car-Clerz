@@ -9,7 +9,7 @@ export interface Car {
     restEquipment?: Array<EquipmentName>;
 }
 
-export type Group = 'A+' | 'B' | 'C' | 'C+' | 'D' | 'D+' | 'E';
+export type Group = 'A+' | 'B' | 'C' | 'C+' | 'D' | 'D+' | 'E'| 'Cross';
 export type Gearbox = 'Automatyczna' | 'Manualna';
 // tslint:disable:quotemark
 export type EquipmentName = "Klimatyzacja" | "ABS" | "Wspomaganie_Kierownicy" |

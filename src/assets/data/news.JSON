@@ -1,0 +1,19 @@
+[
+    {
+        "picture": "https://carnet.pl/assets/Uploads/5-doors-m-sport-L.jpg",
+        "header1": "BMW 1 za 199 zł z VAT",
+        "header2": "Przetestuj BMW serii 1 w promocyjnej cenie",
+        "href": "car/bmw_1"
+    },
+    {
+        "picture": "https://carnet.pl/assets/Uploads/_resampled/SetWidth600-bmw-x2-05.jpg",
+        "header1": "Nowe BMW X2 !!!",
+        "href": "car/bmw_x2"
+    },
+    {
+        "picture": "https://carnet.pl/assets/Uploads/seat-arona-start.jpg",
+        "header1": "Seat Arona w J-Car Clerz Polska",
+        "header2": "Wypróbuj nowego Crossovera",
+        "href": "car/seat_arona"
+    }
+]

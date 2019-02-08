@@ -18,6 +18,31 @@
     justify-content: center;
 }
 
+.row {
+    margin: 50px 0px;
+}
+
+.cars-row {
+    width: 100%;
+    background-image: url('https://carnet.pl/themes/cn/images/chosen_cars_bg.png');
+    padding-top: 40px;
+}
+
+.cars-row > p.main {
+    text-align: center;
+    font-family: 'Roboto-Light';
+    font-size: 40px;
+    margin: 0px 0px 5px 0px;
+}
+
+.cars-row > p.second {
+    text-align: center;
+    font-family: 'Roboto-Light';
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
 .order {
     position: relative;
     top: -160px;

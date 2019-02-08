@@ -28,7 +28,8 @@ export class NavComponent implements OnInit {
       },
       {
         title: 'Promocje', dropdown: [
-          { title: 'Nie ma promocji xD', href: '' },
+          { title: 'BMW X2 za 299zł z VAT', href: 'car/bmw_x2' },
+          { title: 'BMW 1 za 199zł z VAT', href: 'car/bmw_1' }
         ]
       },
       {

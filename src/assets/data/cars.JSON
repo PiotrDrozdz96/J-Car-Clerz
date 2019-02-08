@@ -64,5 +64,39 @@
         "gearbox": "Manualna",
         "restEquipment": ["Klimatyzacja", "Benzyna_lub_Diesel", "Wspomaganie_Kierownicy", 
                         "Centralny_Zamek", "Poduszki_Powietrzne", "5_drzwiowy", "5_osobowy"]
+    },
+    "seat_arona": {
+        "id": "seat_arona",
+        "name": "Seat Arona",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth365-ARONA.png",
+        "pricePerDay": 159,
+        "group": "Cross",
+        "deposit": 600,
+        "gearbox": "Manualna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "Wspomaganie_Kierownicy", 
+                        "5_drzwiowy", "5_osobowy"]
+    },
+    "bmw_1": {
+        "id": "bmw_1",
+        "name": "BMW 1",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth365-bmw-1.png",
+        "pricePerDay": 199,
+        "group": "D+",
+        "deposit": 900,
+        "gearbox": "Automatyczna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "Wspomaganie_Kierownicy", "ABS",
+                "Centralny_Zamek", "Poduszki_Powietrzne", "5_osobowy"]
+    },
+    "bmw_x2": {
+        "id": "bmw_x2",
+        "name": "BMW X2",
+        "image": "https://carnet.pl/assets/Car/_resampled/SetWidth365-bmw-x2.png",
+        "pricePerDay": 299,
+        "group": "E",
+        "deposit": 2000,
+        "gearbox": "Automatyczna",
+        "restEquipment": ["Klimatyzacja", "Benzyna", "ABS",
+                "Centralny_Zamek", "Poduszki_Powietrzne", "5_osobowy"]
     }
+    
 }

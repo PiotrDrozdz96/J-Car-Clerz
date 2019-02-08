@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Slider } from '../slider';
 import { Car } from '../../car/car';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-slider-cars',
@@ -9,9 +10,13 @@ import { Car } from '../../car/car';
 })
 export class SliderCarsComponent extends Slider {
 
-  @Input()
   list: Array<Car>;
 
-  constructor() { super(); }
+  constructor(private api: ApiService) {
+    super();
+    this.api.getCars().subscribe(cars => {
+      this.list = cars;
+    });
+  }
 
 }

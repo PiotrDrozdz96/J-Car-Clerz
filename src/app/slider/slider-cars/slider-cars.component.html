@@ -1,8 +1,8 @@
 <div class="slider">
     <img src="https://carnet.pl/themes/cn/images/icons/prev.png" (click)="left()">
     <div class="slider-container">
-        <div class="slide" *ngFor="let car of list; let index = index">
-            <app-car-price *ngIf="index == currentIndex" [car]="car"></app-car-price>
+        <div class="slide">
+            <app-car-price [car]="list[currentIndex]"></app-car-price>
         </div>
     </div>
     <img src="https://carnet.pl/themes/cn/images/icons/next.png" (click)="right()">

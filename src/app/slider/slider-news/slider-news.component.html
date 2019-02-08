@@ -1,0 +1,9 @@
+<div class="slider">
+  <img src="https://carnet.pl/themes/cn/images/icons/prev.png" (click)="left()">
+  <div class="slider-container">
+      <div class="slide">
+          <app-news [news]="list[currentIndex]"></app-news>
+      </div>
+  </div>
+  <img src="https://carnet.pl/themes/cn/images/icons/next.png" (click)="right()">
+</div>

@@ -10,9 +10,11 @@ import { Car } from '../car/car';
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) { }
 
-   }
+  public getNews(): Observable<any> {
+    return this.http.get('assets/data/news.JSON');
+  }
 
   public getCities(): Observable<any> {
     return this.http.get('assets/data/cities.JSON');
