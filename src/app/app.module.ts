@@ -24,6 +24,8 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { SliderCarsComponent } from './slider/slider-cars/slider-cars.component';
+
 import { ListComponent } from './informations/list/list.component';
 import { RentComponent } from './informations/rent/rent.component';
 import { RentRequirementsComponent } from './informations/rent-requirements/rent-requirements.component';
@@ -65,7 +67,8 @@ import { ReservationService } from './services/reservation.service';
     CarComponent,
     ListComponent,
     RentComponent,
-    RentRequirementsComponent
+    RentRequirementsComponent,
+    SliderCarsComponent
   ],
   imports: [
     BrowserModule,
