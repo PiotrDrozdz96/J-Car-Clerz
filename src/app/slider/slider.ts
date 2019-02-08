@@ -4,8 +4,10 @@ export class Slider implements OnInit {
 
     list: Array<any>;
     currentIndex = 0;
+    slideTime: number;
 
     ngOnInit() {
+        setInterval(() => this.right(), this.slideTime);
     }
 
     public left() {

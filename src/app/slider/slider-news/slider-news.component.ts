@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Slider } from '../slider';
 
@@ -13,8 +13,8 @@ import { ApiService } from '../../services/api.service';
 })
 export class SliderNewsComponent extends Slider {
 
-  @Input()
   list: Array<News>;
+  slideTime = 8000;
 
   constructor(private api: ApiService) {
     super();

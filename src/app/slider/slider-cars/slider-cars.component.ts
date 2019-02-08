@@ -11,6 +11,7 @@ import { ApiService } from '../../services/api.service';
 export class SliderCarsComponent extends Slider {
 
   list: Array<Car>;
+  slideTime = 5600;
 
   constructor(private api: ApiService) {
     super();
