@@ -1,6 +1,6 @@
 <nav class="navbar">
     <ul class="navbar-list">
-        <li class="logo"><img src="../../assets/LOGO.png" alt="logo" (click)="goHome()"></li>
+        <li class="logo"><img src="assets/LOGO.png" alt="logo" (click)="goHome()"></li>
         <div *ngFor="let item of list">
             <li *ngIf="!item.dropdown" class="navbar-item">
                 <a [routerLink]="item.href">
