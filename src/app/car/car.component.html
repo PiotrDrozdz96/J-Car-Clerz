@@ -1,9 +1,9 @@
 <app-car-full [car]="car" [choosenOption]="false"></app-car-full>
 <div class="button-row">
-    <a href="/#/flota">
+    <a [routerLink]="'/flota'">
         <p>powróć do listy</p>
         <mat-icon>list</mat-icon> 
     </a>
     <p>lub</p>
-    <button mat-raised-button color="accent" onclick="window.location.href = '/#';">Zarezerwuj</button>
+    <button mat-raised-button color="accent" [routerLink]="'/'">Zarezerwuj</button>
 </div>
